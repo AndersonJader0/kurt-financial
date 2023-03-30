@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anderson Jader">
+    <meta name="keywords" content="finanças, dinheiro, controle, contas, pagamentos, autonomia">
+    <meta name="description" content="Tenha controle e autonomia sobre seu dinheiro de forma fácil e simples com Kurt Financials.">
+    <meta name="copyright" content="Open Source">
+    <meta name="rating" content="general">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/menu.js"></script>
+    <script src="/scripts/bills.js"></script>
+    <link rel="icon" href="/images/iconPage.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Kurt Financials</title>
+</head>
+<body>
+    <nav id="menu">
+        <ul class="menu-content">
+            <li onclick="menu()"><i class="fa-solid fa-bars"></i></li>
+            <li><h1>Kurt Financial</h1></li>
+        </ul>
+        <div class="menu-left">
+            <i class="fa-solid fa-xmark" onclick="menu()"></i>
+            <p>Calculadora</p>
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum</p>
+            <p>Tabela completa</p>
+            <h2 class="valorTotal">Valor Total</h2>
+            <div id="all-value"></div>
+            <h2 class="contas">Contas</h2>
+            <div id="all-bill"></div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="dateInput">
+            <label>Conta</label>
+            <input type="text" id="conta">
+            <label for="value">Valor</label>
+            <input type="number" id="valor">
+            <label for="date">Data prevista</label>
+            <input type="date" id="data">
+            <label>Descrição</label>
+            <input type="text" id="desc">
+            <div class="btns">
+            <button onclick="conta.lerDados()" id="adicionar">Adicionar</button>
+            <button onclick="conta.cancelar()">Cancelar</button>
+            </div>
+        </section>
+
+        <section class="dateTable">
+            <table>
+                <thead>
+                    <th>Conta</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th id="desc">Descrição</th>
+                    <th id="edit">Editar</th>
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,146 @@
+#menu {
+  color: white;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1em 2em;
+  font-size: 1.4em;
+}
+
+.menu-left {
+  position: absolute;
+  background-color: #3533bc;
+  width: 60%;
+  height: 100vh;
+  top: 0;
+  transform: translateX(-100%);
+  transition: 0.25s;
+}
+.menu-left i {
+  padding: 1em;
+  font-size: 1.4em;
+}
+.menu-left p {
+  text-align: center;
+  margin: 1.5em;
+}
+.menu-left h2 {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.menu-left .contas {
+  margin-top: 1em;
+}
+
+#all-value {
+  height: 2.5em;
+  width: 80%;
+  background-color: #E5E8EB;
+  margin: 0 auto;
+}
+
+#all-bill {
+  height: 2.5em;
+  width: 80%;
+  background-color: #E5E8EB;
+  margin: 0 auto;
+}
+
+.dateTable {
+  padding: 2em;
+  width: 100%;
+  color: white;
+  font-size: 0.9em;
+}
+.dateTable table {
+  text-align: center;
+  border-collapse: collapse;
+}
+.dateTable th {
+  border: 2px solid rgb(255, 255, 255);
+  background-image: linear-gradient(#261682, #222ba0);
+  height: 2em;
+  line-height: 2em;
+}
+.dateTable #desc {
+  display: none;
+}
+
+.dateInput {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr) 7 auto;
+  color: white;
+  padding: 2em;
+  align-items: center;
+  gap: 12px;
+}
+
+input {
+  height: 3em;
+}
+
+input[type=text] {
+  grid-column: 1/3;
+}
+
+input[type=number] {
+  grid-column: 1/2;
+}
+
+input[type=date] {
+  grid-column: 2/3;
+  padding: 0.1em;
+}
+
+label[for=date] {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+.btns {
+  display: inline-block;
+}
+.btns button {
+  padding: 10px 5px;
+  font-weight: 600;
+  color: white;
+  background: #222ba0;
+  border: 1px solid white;
+  border-radius: 0.1em;
+}
+
+.dateTable table {
+  width: 100%;
+}
+.dateTable th {
+  width: 25%;
+}
+.dateTable #edit {
+  width: 18%;
+}
+.dateTable td {
+  background: #545bbe;
+  color: white;
+  border: 2px solid white;
+  padding: 3px 0;
+}
+.dateTable img {
+  width: 1.2em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #3533cd, #000);
+  font-family: "Roboto";
+}/*# sourceMappingURL=style.css.map */

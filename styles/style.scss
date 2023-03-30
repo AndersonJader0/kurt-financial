@@ -1,0 +1,14 @@
+@import './nav';
+@import './main';
+
+*{
+    box-sizing: border-box;
+}
+
+$font-m: 'Roboto';
+$font-s: 'Poppins';
+
+body{
+    background-image: linear-gradient(to right, #3533cd, #000);
+    font-family: $font-m;
+}
