@@ -31,6 +31,7 @@ class Conta{
                     this.arrayContas[i].data = conta.data;
                 }
                 this.addDados();
+                document.getElementById('adicionar').innerText = 'Adicionar';
             }
             }else{
                 //não mudou
