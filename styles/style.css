@@ -138,12 +138,13 @@ label[for=date] {
 }
 .dateTable th {
   width: 25%;
+  border: 1px solid white;
 }
 .dateTable #edit {
   width: 18%;
 }
 .dateTable td {
-  background: #545bbe;
+  background: #4d55be;
   color: white;
   border: 1px solid white;
   align-self: start;
