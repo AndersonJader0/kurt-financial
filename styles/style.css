@@ -145,7 +145,7 @@ label[for=date] {
 .dateTable td {
   background: #545bbe;
   color: white;
-  border: 2px solid white;
+  border: 1px solid white;
   align-self: start;
 }
 .dateTable td img {
