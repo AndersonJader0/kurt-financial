@@ -10,6 +10,8 @@
 
 input{
     height: 3em;
+    font-family: 'Roboto';
+    font-size: 1.05;
 }
 
 input[type = text]{
@@ -43,8 +45,11 @@ label[for = date]{
 }
 
 .dateTable{
+    max-height: 250px;
+    overflow: scroll;
     table{
         width: 100%;
+        text-align: center;
     }
 
     th{
@@ -59,10 +64,18 @@ label[for = date]{
         background: #545bbe;
         color: white;
         border: 2px solid white;
-        padding: 3px 0;
+        align-self: start;
+
+        img{
+            transform: translateY(.5em);
+            margin: .1em;
+        }
     }
 
     img{
-        width: 1.2em;
+        width: 1.7em;
+    }
+    .fix{
+        padding-bottom: .9em;
     }
 }

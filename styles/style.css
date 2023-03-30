@@ -40,17 +40,25 @@
 }
 
 #all-value {
-  height: 2.5em;
+  height: 2em;
   width: 80%;
   background-color: #E5E8EB;
   margin: 0 auto;
+  color: #222;
+  text-align: center;
+  line-height: 2em;
+  font-size: 1.3em;
 }
 
 #all-bill {
-  height: 2.5em;
+  height: 2em;
   width: 80%;
   background-color: #E5E8EB;
   margin: 0 auto;
+  color: #222;
+  text-align: center;
+  line-height: 2em;
+  font-size: 1.3em;
 }
 
 .dateTable {
@@ -62,6 +70,7 @@
 .dateTable table {
   text-align: center;
   border-collapse: collapse;
+  font-family: "Roboto";
 }
 .dateTable th {
   border: 2px solid rgb(255, 255, 255);
@@ -85,6 +94,8 @@
 
 input {
   height: 3em;
+  font-family: "Roboto";
+  font-size: 1.05;
 }
 
 input[type=text] {
@@ -117,8 +128,13 @@ label[for=date] {
   border-radius: 0.1em;
 }
 
+.dateTable {
+  max-height: 250px;
+  overflow: scroll;
+}
 .dateTable table {
   width: 100%;
+  text-align: center;
 }
 .dateTable th {
   width: 25%;
@@ -130,10 +146,17 @@ label[for=date] {
   background: #545bbe;
   color: white;
   border: 2px solid white;
-  padding: 3px 0;
+  align-self: start;
+}
+.dateTable td img {
+  transform: translateY(0.5em);
+  margin: 0.1em;
 }
 .dateTable img {
-  width: 1.2em;
+  width: 1.7em;
+}
+.dateTable .fix {
+  padding-bottom: 0.9em;
 }
 
 * {

@@ -8,29 +8,45 @@ class Conta{
     lerDados(){
         let conta = {};
         conta.id = this.id;
-        alert(conta.id);
         conta.nome = document.getElementById('conta').value;
         conta.valor = document.getElementById('valor').value;
         conta.data = document.getElementById('data').value;
 
-        this.addDados(conta);
+        if(conta.nome != '' && conta.valor!= ''){
+        this.verifier(conta);
+        }
     }
 
-    addDados(conta){
+    verifier(conta){
         if(document.getElementById('adicionar').innerText === 'Editar'){
-            alert(this.idOfEdit);
+            // alert(this.idOfEdit);
             if(document.getElementById('conta').value != this.arrayContas[this.idOfEdit - 1].nome ||
             document.getElementById('valor').value != this.arrayContas[this.idOfEdit - 1].valor ||
             document.getElementById('data').value != this.arrayContas[this.idOfEdit - 1].data){
-            alert('Mudou');
+
+            for(let i = 0; i < this.arrayContas.length; i++){
+                if(this.arrayContas[i].id == this.idOfEdit){
+                    this.arrayContas[i].nome = conta.nome;
+                    this.arrayContas[i].valor = conta.valor;
+                    this.arrayContas[i].data = conta.data;
+                }
+                this.addDados();
+            }
+            }else{
+                //não mudou
+            }
+            
         }else{
-            alert('Não mudou');
+            this.arrayContas.push(conta);
+            this.addDados();
         }
-        }else{
+    }
+
+    addDados(){
         let tbody = document.getElementById('tbody');
+        
         tbody.innerHTML = '';
 
-        this.arrayContas.push(conta);
         for(let i = 0; i < this.arrayContas.length; i++){
             let tr = tbody.insertRow();
             let data_nome = tr.insertCell();
@@ -50,14 +66,21 @@ class Conta{
             data_edit.appendChild(imgEdit);
             data_edit.appendChild(imgDel);
 
-            imgEdit.setAttribute('onclick', 'conta.delete('+ this.arrayContas[i].id +')');
+            imgDel.setAttribute('onclick', 'conta.delete('+ this.arrayContas[i].id +')');
             imgEdit.setAttribute('onclick', 'conta.edit('+ JSON.stringify(this.arrayContas[i]) +')');
+
+            data_nome.classList.add('fix');
+            data_valor.classList.add('fix');
+            data_data.classList.add('fix');
+            data_edit.classList.add('imgs');
+
         }
 
         this.cancelar();
         this.id++;
+        this.calculate();
+        this.bill();
     }
-}
     
 
     cancelar(){
@@ -75,6 +98,8 @@ class Conta{
                 tbody.deleteRow(i);
             }
         }
+        this.calculate();
+        this.bill();
     }
 
     edit(conta){
@@ -83,6 +108,18 @@ class Conta{
         document.getElementById('data').value = conta.data;
         document.getElementById('adicionar').innerText = 'Editar';
         this.idOfEdit = conta.id;
+    }
+
+    calculate(){
+        let soma = 0;
+        for(let i = 0; i < this.arrayContas.length; i++){
+            soma += parseFloat(this.arrayContas[i].valor);
+        }
+        document.getElementById('all-value').innerText = 'R$' + soma;
+    }
+
+    bill(){
+        document.getElementById('all-bill').innerText = this.arrayContas.length;
     }
 }
 

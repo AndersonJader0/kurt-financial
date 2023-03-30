@@ -41,10 +41,14 @@
 }
 
 @mixin theme_display(){
-    height: 2.5em;
+    height: 2em;
     width: 80%;
     background-color: #E5E8EB;
     margin: 0 auto;
+    color: #222;
+    text-align: center;
+    line-height: 2em;
+    font-size: 1.3em;
 }
 
 #all-value{
@@ -64,6 +68,7 @@
     table{
         text-align: center;
         border-collapse: collapse;
+        font-family: 'Roboto';
     }
     th{
         border: 2px solid rgb(255, 255, 255);
