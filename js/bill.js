@@ -54,6 +54,8 @@ class Bill{
 
             iconDelete.setAttribute('onclick', 'bill.deleteTableRow('+ this.arrayBills[i].id +')');
             iconEdit.setAttribute('onclick', 'bill.prepareTableRowEdition('+ JSON.stringify(this.arrayBills[i]) +')');
+
+            data_options.classList.add('onlyTopBottomPadding');
         }
         this.id++;
         this.clearInputFields();

@@ -132,7 +132,7 @@ table{
         border-top-right-radius: 1em;
     }
 
-    td{
+    td:not(:nth-child(4)){
         font-size: 1em;
         text-align: center;
         padding: .8em;
@@ -144,6 +144,16 @@ table{
                 cursor: pointer;
             }
         }
+
+        
+    }
+    img{
+        margin: 0;
+        display: inline-block;
+        width: 1.9em;
+        padding: .3em;
+        text-align: center;
+        vertical-align: center;
     }
 
     tr{
@@ -172,3 +182,4 @@ table{
     color: variables.$text-color-default;
     border-bottom-right-radius: 1em;
 }
+
