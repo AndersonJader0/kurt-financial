@@ -83,6 +83,10 @@ main{
     p{
         font-weight: 300;
     }
+
+    div{
+        color: variables.$text-color-second;
+    }
 }
 
 #box-fields{

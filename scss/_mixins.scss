@@ -27,6 +27,10 @@
     background-color: rgba(217, 215, 215, 0.5);
     color: variables.$form-text-color;
     font-family: variables.$main-font;
+
+    &:focus{
+        color: variables.$text-color-second;
+    }
 }
 
 @mixin theme_div_bar-left(){
