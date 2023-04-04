@@ -46,9 +46,14 @@ h1 {
 }
 #display-values div {
   color: #1a1a1a;
+  padding: 0.3em;
+  transition: background 0.25s ease-in-out;
 }
 #display-values img {
   width: 1.4em;
+}
+#display-values #eyesClosed {
+  display: none;
 }
 
 main {

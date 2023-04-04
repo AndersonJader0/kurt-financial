@@ -49,10 +49,16 @@ h1{
 
     div{
         color: variables.$text-color-second;
+        padding: .3em;
+        transition: background .25s ease-in-out;
     }
 
     img{
         width: 1.4em;
+    }
+
+    #eyesClosed{
+        display: none;
     }
 }
 

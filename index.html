@@ -8,7 +8,7 @@
     <link rel="icon" href="/images/iconPage.png">
     <link rel="stylesheet" href="/css/style.css">
     <title>Kurt Financial</title>
-    <script src="/js/bar-left.js"></script>
+    <script src="/js/display.js"></script>
     <script src="/js/bill.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,8 @@
             <section id="display-values">
                 <p>O valor total</p>
                 <div id="div1">R$ 0</div>
-                <img src="/images/IconEye.png">
+                <img src="/images/IconEye.png" onclick="hideAndShowValue()" id="eyesOpened">
+                <img src="/images/iconEyesClosed.png" onclick="hideAndShowValue()" id="eyesClosed">
             </section>
             <li class="bar-content-item"><h1>Kurt Financial</h1></li>
         </ul>
