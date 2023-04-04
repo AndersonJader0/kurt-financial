@@ -158,7 +158,7 @@ table tr {
   background-color: rgb(255, 255, 255);
 }
 table tr:nth-child(odd) {
-  background: #efefef;
+  background: #f4f4f4;
 }
 table img {
   background: #3533cd;
