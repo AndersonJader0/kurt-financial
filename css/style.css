@@ -103,7 +103,7 @@ main {
 }
 #box-fields label {
   padding: 1.5em 0 0em 0em;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Inter";
 }
 #box-fields input[type=text] {
