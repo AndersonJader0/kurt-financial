@@ -13,6 +13,7 @@ body{
 h1{
     color: variables.$text-color-default;
 }
+
 #bar{
     height: 15vh;
 }
@@ -72,6 +73,18 @@ main{
     overflow: auto;
 }
 
+#display-values{
+    display: flex;
+    border: 1px solid variables.$border-table-color;
+    padding: 1em;
+    border-radius: .7em;
+    justify-content: space-between;
+    color: variables.$table-text-color;
+    p{
+        font-weight: 300;
+    }
+}
+
 #box-fields{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -115,6 +128,7 @@ table{
     box-shadow: 0 5px 12px rgba(32, 32, 32, .3);
     border: 1px solid variables.$border-table-color;
     color: variables.$table-text-color;
+    border-top-left-radius: 2em;
     overflow: scroll;
 
     th{

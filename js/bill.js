@@ -53,6 +53,7 @@ class Bill{
         }
         this.id++;
         this.clearInputFields();
+        this.calculateTotalValue();
     }
 
     clearInputFields = () => document.getElementById('box-fields').reset();
@@ -65,6 +66,7 @@ class Bill{
                 tbody.deleteRow(i);
             }
         }
+        this.calculateTotalValue();
     }
 
     prepareTableRowEdition(bill){
@@ -86,6 +88,14 @@ class Bill{
             }
         }
         this.addDateOnTable();
+    }
+
+    calculateTotalValue(){
+        let amountTotal = 0;
+        for(let i = 0; i < this.arrayBills.length; i++){
+            amountTotal += parseFloat(this.arrayBills[i].value);
+        }
+        document.getElementById('div1').innerText = 'R$' + amountTotal;
     }
 }
 

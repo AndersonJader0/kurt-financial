@@ -33,6 +33,14 @@
     </nav>
 
     <main>
+
+        <section id="display-values">
+            <p>O valor total</p>
+            <div id="div1">R$ 0</div>
+            <p>Fig</p>
+        </section>
+
+
         <form id="box-fields">
             <label for="name">Nome</label>
             <input type="text" id="name" name="Name" placeholder="Digite a conta aqui" required>
@@ -43,6 +51,8 @@
             <button type="button" id="add" onclick="bill.readInputData()">Adicionar</button>
             <button type="button" id="cancel" onclick="bill.clearInputFields()">Cancelar</button>
         </form>
+
+        
 
         <table>
             <thead>
