@@ -107,7 +107,7 @@ class Bill{
     calculateTotalBills(){
         let amountBill = 0;
         amountBill += this.arrayBills.length;
-        document.getElementById('tfooter2').innerText = amountBill;
+        document.getElementById('ammountBill').innerText = amountBill;
     }
 }
 
