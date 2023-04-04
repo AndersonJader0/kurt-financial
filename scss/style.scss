@@ -36,7 +36,7 @@ h1{
 
 #display-values{
     display: flex;
-    width: 55%;
+    width: 60%;
     border: 1px solid variables.$border-table-color;
     padding: .9em;
     border-radius: .7em;
@@ -54,34 +54,6 @@ h1{
     img{
         width: 1.4em;
     }
-}
-
-#bar-left{
-    height: 100vh;
-    width: 50%;
-    transform: translateX(-100%);
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: variables.$text-color-default;
-    background-color: variables.$primary-color;
-    text-align: center;
-    transition: transform .4s ease-in-out; 
-    img{
-        padding: 2em 0 1em 0;
-
-        &:hover{
-            cursor: pointer;
-        }
-    }
-
-    :nth-child(1){
-        margin-bottom: 1.2em
-    }
-
-   div{
-    @include mixins.theme_div_bar-left;
-   }
 }
 
 main{
