@@ -1,0 +1,158 @@
+@use 'variables';
+@use 'mixins';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: variables.$page-background;
+    font-family: variables.$main-font;
+}
+
+h1{
+    color: variables.$text-color-default;
+}
+#bar{
+    height: 15vh;
+}
+
+#bar-content{
+    padding: 1.9em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+    img:hover{
+        cursor: pointer;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+}
+
+#bar-left{
+    height: 100vh;
+    width: 50%;
+    transform: translateX(-100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: variables.$text-color-default;
+    background-color: variables.$primary-color;
+    text-align: center;
+    transition: transform .4s ease-in-out; 
+    img{
+        padding: 2em 0 1em 0;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    :nth-child(1){
+        margin-bottom: 1.2em
+    }
+
+   div{
+    @include mixins.theme_div_bar-left;
+   }
+}
+
+main{
+    margin: 0 5px;
+    background-color: variables.$main-background;
+    height: 85vh;
+    padding: 1.6em;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    overflow: auto;
+}
+
+#box-fields{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 45px);
+    gap: 0 4px;
+    color: variables.$form-text-color;
+
+    input{
+        @include mixins.theme_input;
+    }
+
+    label{
+        padding: 1.5em 0 0em 0em;
+        font-weight: 400;
+        font-family: 'Inter';
+    }
+
+    input[type="text"]{
+        grid-column: 1 / 3;
+    }
+    
+    input[type="number"]{
+        grid-row: 4 / 5;
+    }
+    
+    input[type="date"]{
+        grid-row: 4 / 5;
+    }
+}
+
+button{
+    @include mixins.theme_button;
+}
+
+#add{
+    grid-column: 1 / 2;
+}
+
+table{
+    width: 100%;
+    box-shadow: 0 5px 12px rgba(32, 32, 32, .3);
+    border: 1px solid variables.$border-table-color;
+    color: variables.$table-text-color;
+    overflow: scroll;
+
+    th{
+        font-size: .8em;
+        padding: .6em;
+        color: variables.$text-color-default;
+        background-color: variables.$th-background;
+        border: 1px solid variables.$border-table-color;
+        border-radius: .2em;
+        text-transform: uppercase;
+    }
+
+    td{
+        font-size: 1em;
+        text-align: center;
+        padding: .8em;
+        border: 1px solid variables.$border-table-color;
+        border-radius: .2em;
+        vertical-align: middle;
+        img{
+            width: 2em;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    tr{
+        background-color: #dfdfdf;
+    }
+
+    tr:nth-child(odd){
+        background: #d4d4d4;
+    }
+
+    img{
+        background: variables.$primary-color;
+        border-radius: .2em;
+        margin: .1em;
+    }
+}

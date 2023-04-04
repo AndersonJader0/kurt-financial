@@ -1,0 +1,38 @@
+@use 'variables';
+
+@mixin theme_button(){
+    padding: 1.1em 0;
+    background-color: variables.$text-color-default;
+    border: 1px solid variables.$text-color-default;
+    color: variables.$text-color-default;
+    background-color: variables.$primary-color;
+    font-weight: 500;
+    border-radius: .5em;
+    transition: all .25s ease-in;
+    margin: 2em 0 2em 0;
+    font-size: 1em;
+    cursor: pointer;
+    &:hover{
+        background-color: variables.$button-hover-background;
+    }
+}
+
+@mixin theme_input(){
+    font-size: 1em;
+    outline: 0;
+    border: none;
+    padding: 1.6em 0em 1.6em 0.9em;
+    width: 100%;
+    border-radius: .5em;
+    background-color: rgba(217, 215, 215, 0.5);
+    color: variables.$form-text-color;
+    font-family: variables.$main-font;
+}
+
+@mixin theme_div_bar-left(){
+    background: variables.$text-color-default;
+    color: variables.$text-color-second;
+    padding: .8em;
+    font-size: 1.2em;
+    margin: .5em;
+}
