@@ -6,26 +6,25 @@
 }
 
 body{
-    background-image: variables.$page-background;
+    background-image: variables.$main-background;
     font-family: variables.$main-font;
 }
 
 h1{
-    color: variables.$text-color-default;
+    color: variables.$text-color-second;
 }
 
 #bar{
-    height: 15vh;
+    height: 10vh;
 }
 
 #bar-content{
-    padding: 1.9em;
+    padding: 1.5em;
     list-style: none;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 1.5em;
     img:hover{
         cursor: pointer;
     }
@@ -65,7 +64,6 @@ h1{
 
 main{
     margin: 0 5px;
-    background-color: variables.$main-background;
     height: 85vh;
     padding: 1.6em;
     border-top-right-radius: 2em;
@@ -75,11 +73,13 @@ main{
 
 #display-values{
     display: flex;
+    width: 55%;
     border: 1px solid variables.$border-table-color;
-    padding: 1em;
+    padding: .6em;
     border-radius: .7em;
     justify-content: space-between;
     color: variables.$table-text-color;
+    align-items: center;
     p{
         font-weight: 300;
     }
@@ -87,13 +87,10 @@ main{
     div{
         color: variables.$text-color-second;
     }
-}
 
-#traco{
-    width: 95%;
-    height: 1px;
-    background-color: variables.$text-color-second;
-    margin: 1em auto 0 auto;
+    img{
+        width: 2em;
+    }
 }
 
 #box-fields{
