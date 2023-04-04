@@ -137,6 +137,12 @@ table th {
   background-color: #3533cd;
   text-transform: uppercase;
 }
+table #th1 {
+  border-top-left-radius: 1em;
+}
+table #th4 {
+  border-top-right-radius: 1em;
+}
 table td {
   font-size: 1em;
   text-align: center;
