@@ -123,7 +123,7 @@ button:hover {
 
 table {
   width: 100%;
-  color: rgb(95, 95, 95);
+  color: #1a1a1a;
   overflow: scroll;
   border-top-right-radius: 5em;
   border-top-left-radius: 5em;
