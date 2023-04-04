@@ -89,6 +89,13 @@ main{
     }
 }
 
+#traco{
+    width: 95%;
+    height: 1px;
+    background-color: variables.$text-color-second;
+    margin: 1em auto 0 auto;
+}
+
 #box-fields{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
