@@ -132,28 +132,21 @@ table{
         border-top-right-radius: 1em;
     }
 
-    td:not(:nth-child(4)){
+    td{
         font-size: 1em;
         text-align: center;
-        padding: .8em;
+        padding: .8em 0;
         border: 1px solid variables.$border-table-color;
         vertical-align: middle;
         img{
-            width: 2em;
+            width: 1.9em;
+            padding: .3em;
             &:hover{
                 cursor: pointer;
             }
         }
 
         
-    }
-    img{
-        margin: 0;
-        display: inline-block;
-        width: 1.9em;
-        padding: .3em;
-        text-align: center;
-        vertical-align: center;
     }
 
     tr{

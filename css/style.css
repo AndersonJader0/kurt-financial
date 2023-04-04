@@ -141,26 +141,19 @@ table #th1 {
 table #th4 {
   border-top-right-radius: 1em;
 }
-table td:not(:nth-child(4)) {
+table td {
   font-size: 1em;
   text-align: center;
-  padding: 0.8em;
+  padding: 0.8em 0;
   border: 1px solid rgb(183, 183, 183);
   vertical-align: middle;
 }
-table td:not(:nth-child(4)) img {
-  width: 2em;
-}
-table td:not(:nth-child(4)) img:hover {
-  cursor: pointer;
-}
-table img {
-  margin: 0;
-  display: inline-block;
+table td img {
   width: 1.9em;
   padding: 0.3em;
-  text-align: center;
-  vertical-align: center;
+}
+table td img:hover {
+  cursor: pointer;
 }
 table tr {
   background-color: rgb(255, 255, 255);
