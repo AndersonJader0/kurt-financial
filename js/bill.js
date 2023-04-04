@@ -101,7 +101,11 @@ class Bill{
         for(let i = 0; i < this.arrayBills.length; i++){
             amountTotal += parseFloat(this.arrayBills[i].value);
         }
-        document.getElementById('div1').innerText = 'R$ ' + amountTotal;
+        if(amountTotal != 0){
+        document.getElementById('div1').innerText = 'R$ ' + amountTotal.toFixed(2);
+        }else{
+            document.getElementById('div1').innerText = 'R$ ' + amountTotal;
+        }
     }
 
     calculateTotalBills(){
