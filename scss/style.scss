@@ -68,6 +68,7 @@ main{
     border-top-right-radius: 2em;
     border-top-left-radius: 2em;
     overflow: auto;
+    position: relative;
 }
 
 #box-fields{
@@ -106,6 +107,28 @@ button{
 
 #add{
     grid-column: 1 / 2;
+}
+
+#acessFullTable{
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    justify-content: center;
+    padding: .5em;
+    gap: 10px;
+    width: auto;
+    border: 1px solid variables.$form-text-color;
+    border-radius: .5em;
+    width: 12em;
+    margin: 0 auto 1em auto;
+    transition: letter-spacing .25s ease;
+    img{
+        width: 1.2em;
+    }
+    &:hover{
+        cursor: pointer;
+        letter-spacing: 1.2px;
+    }
 }
 
 table{
