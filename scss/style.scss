@@ -110,8 +110,6 @@ button{
 
 table{
     width: 100%;
-    box-shadow: 0 5px 12px rgba(32, 32, 32, .3);
-    border: 1px solid variables.$border-table-color;
     color: variables.$table-text-color;
     overflow: scroll;
     border-top-right-radius: 5em;
@@ -161,4 +159,16 @@ table{
         border-radius: .2em;
         margin: .1em;
     }
+}
+
+#tfooter{
+    background: variables.$primary-color;
+    color: variables.$text-color-default;
+    border-bottom-left-radius: 1em;
+}
+
+#ammountBill{
+    background: variables.$primary-color;
+    color: variables.$text-color-default;
+    border-bottom-right-radius: 1em;
 }

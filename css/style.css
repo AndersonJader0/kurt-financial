@@ -123,8 +123,6 @@ button:hover {
 
 table {
   width: 100%;
-  box-shadow: 0 5px 12px rgba(32, 32, 32, 0.3);
-  border: 1px solid rgb(183, 183, 183);
   color: rgb(95, 95, 95);
   overflow: scroll;
   border-top-right-radius: 5em;
@@ -166,6 +164,18 @@ table img {
   background: #3533cd;
   border-radius: 0.2em;
   margin: 0.1em;
+}
+
+#tfooter {
+  background: #3533cd;
+  color: #efefef;
+  border-bottom-left-radius: 1em;
+}
+
+#ammountBill {
+  background: #3533cd;
+  color: #efefef;
+  border-bottom-right-radius: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

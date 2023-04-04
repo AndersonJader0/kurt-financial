@@ -12,12 +12,16 @@ class Bill{
         bill.value = document.getElementById('value').value;
         bill.date = document.getElementById('date').value;
 
-        if(document.getElementById('add').innerText == 'Adicionar'){
-            this.saveDateOnArrayBills(bill);
-            this.addDateOnTable();
+        if(bill.value.length === 0){
+            alert('É obrigatório preencher o valor');
         }else{
-            this.editTableRow(bill);
-            document.getElementById('add').innerText = 'Adicionar';
+            if(document.getElementById('add').innerText == 'Adicionar'){
+                this.saveDateOnArrayBills(bill);
+                this.addDateOnTable();
+            }else{
+                this.editTableRow(bill);
+                document.getElementById('add').innerText = 'Adicionar';
+            }
         }
     }
 
@@ -54,6 +58,7 @@ class Bill{
         this.id++;
         this.clearInputFields();
         this.calculateTotalValue();
+        this.calculateTotalBills();
     }
 
     clearInputFields = () => document.getElementById('box-fields').reset();
@@ -67,6 +72,7 @@ class Bill{
             }
         }
         this.calculateTotalValue();
+        this.calculateTotalBills();
     }
 
     prepareTableRowEdition(bill){
@@ -96,6 +102,12 @@ class Bill{
             amountTotal += parseFloat(this.arrayBills[i].value);
         }
         document.getElementById('div1').innerText = 'R$ ' + amountTotal;
+    }
+
+    calculateTotalBills(){
+        let amountBill = 0;
+        amountBill += this.arrayBills.length;
+        document.getElementById('tfooter2').innerText = amountBill;
     }
 }
 
