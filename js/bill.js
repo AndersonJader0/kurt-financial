@@ -95,7 +95,7 @@ class Bill{
         for(let i = 0; i < this.arrayBills.length; i++){
             amountTotal += parseFloat(this.arrayBills[i].value);
         }
-        document.getElementById('div1').innerText = 'R$' + amountTotal;
+        document.getElementById('div1').innerText = 'R$ ' + amountTotal;
     }
 }
 

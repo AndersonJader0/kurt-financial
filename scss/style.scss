@@ -113,16 +113,16 @@ table{
     box-shadow: 0 5px 12px rgba(32, 32, 32, .3);
     border: 1px solid variables.$border-table-color;
     color: variables.$table-text-color;
-    border-top-left-radius: 2em;
     overflow: scroll;
+    border-top-right-radius: 5em;
+    border-top-left-radius: 5em;
 
     th{
         font-size: .8em;
-        padding: .6em;
+        padding: 1.5em .6em;
         color: variables.$text-color-default;
-        background-color: variables.$th-background;
-        border: 1px solid variables.$border-table-color;
-        border-radius: .2em;
+        background-color: variables.$primary-color;
+        // border: 1px solid variables.$button-hover-background;
         text-transform: uppercase;
     }
 
@@ -131,7 +131,6 @@ table{
         text-align: center;
         padding: .8em;
         border: 1px solid variables.$border-table-color;
-        border-radius: .2em;
         vertical-align: middle;
         img{
             width: 2em;

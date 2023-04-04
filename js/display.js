@@ -1,4 +1,5 @@
 let isShowing = true;
+
 function hideAndShowValue(){
     let value = document.getElementById('div1');
     let eyesOpened = document.getElementById('eyesOpened');

@@ -126,16 +126,15 @@ table {
   box-shadow: 0 5px 12px rgba(32, 32, 32, 0.3);
   border: 1px solid rgb(183, 183, 183);
   color: rgb(95, 95, 95);
-  border-top-left-radius: 2em;
   overflow: scroll;
+  border-top-right-radius: 5em;
+  border-top-left-radius: 5em;
 }
 table th {
   font-size: 0.8em;
-  padding: 0.6em;
+  padding: 1.5em 0.6em;
   color: #efefef;
-  background-color: rgb(42, 42, 207);
-  border: 1px solid rgb(183, 183, 183);
-  border-radius: 0.2em;
+  background-color: #3533cd;
   text-transform: uppercase;
 }
 table td {
@@ -143,7 +142,6 @@ table td {
   text-align: center;
   padding: 0.8em;
   border: 1px solid rgb(183, 183, 183);
-  border-radius: 0.2em;
   vertical-align: middle;
 }
 table td img {
