@@ -31,6 +31,26 @@ h1 {
   font-size: 1.2em;
 }
 
+#display-values {
+  display: flex;
+  width: 55%;
+  border: 1px solid rgb(183, 183, 183);
+  padding: 0.9em;
+  border-radius: 0.7em;
+  justify-content: space-between;
+  color: rgb(95, 95, 95);
+  align-items: center;
+}
+#display-values p {
+  font-weight: 300;
+}
+#display-values div {
+  color: #1a1a1a;
+}
+#display-values img {
+  width: 1.5em;
+}
+
 #bar-left {
   height: 100vh;
   width: 50%;
@@ -66,26 +86,6 @@ main {
   border-top-right-radius: 2em;
   border-top-left-radius: 2em;
   overflow: auto;
-}
-
-#display-values {
-  display: flex;
-  width: 55%;
-  border: 1px solid rgb(183, 183, 183);
-  padding: 0.6em;
-  border-radius: 0.7em;
-  justify-content: space-between;
-  color: rgb(95, 95, 95);
-  align-items: center;
-}
-#display-values p {
-  font-weight: 300;
-}
-#display-values div {
-  color: #1a1a1a;
-}
-#display-values img {
-  width: 2em;
 }
 
 #box-fields {
