@@ -1,14 +1,18 @@
-function openAndCloseTable(){
-    const table = document.getElementById('table');
-    const acessFullTable = document.getElementById('acessFullTable');
+var isFullView = false;
 
-    // table.style.overflow = 'static';
-    // table.style.height = '90vh';
-    table.style.position = 'absolute';
-    table.style.top = '7vh';
-    table.style.width ='88%';
-    acessFullTable.style.position = 'absolute';
-    acessFullTable.style.top = '1vh';
-    acessFullTable.style.left = '50%';
-    acessFullTable.style.transform = 'translateX(-50%)';
+function openAndCloseTable(){
+    const boxFields = document.getElementById('box-fields');
+    const acessFullTable = document.getElementById('acessFullTable');
+    const textFullTable = document.getElementById('textFullTable');
+    if(isFullView){
+        boxFields.style.height = '300px';
+        isFullView = false;
+        textFullTable.innerText = 'Diminuir tabela';
+        document.getElementById('imgOfFullTable').style.transform = 'rotate(0deg)';
+    }else{
+        boxFields.style.height = '0px';
+        isFullView = true;
+        textFullTable.innerText = 'Aumentar tabela';
+        document.getElementById('imgOfFullTable').style.transform = 'rotate(180deg)';
+    }
 }

@@ -77,6 +77,9 @@ main{
     grid-template-rows: repeat(4, 45px);
     gap: 0 4px;
     color: variables.$form-text-color;
+    overflow: hidden;
+    transition: all .5s ease-in;
+    height: 300px;
 
     input{
         @include mixins.theme_input;

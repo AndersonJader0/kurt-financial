@@ -29,21 +29,20 @@
     </nav>
 
     <main>
-
-        <form id="box-fields">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="Name" placeholder="Digite a conta aqui" required>
-            <label for="value">Valor</label>
-            <input type="number" id="value" name="Value" placeholder="Digite o valor aqui" required>
-            <label for="date">Data</label>
-            <input type="date" id="date" name="Date">
-            <button type="button" id="add" onclick="bill.readInputData()">Adicionar</button>
-            <button type="button" id="cancel" onclick="bill.clearInputFields()">Cancelar</button>
-        </form>
+            <form id="box-fields">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="Name" placeholder="Digite a conta aqui" required>
+                <label for="value">Valor</label>
+                <input type="number" id="value" name="Value" placeholder="Digite o valor aqui" required>
+                <label for="date">Data</label>
+                <input type="date" id="date" name="Date">
+                <button type="button" id="add" onclick="bill.readInputData()">Adicionar</button>
+                <button type="button" id="cancel" onclick="bill.clearInputFields()">Cancelar</button>
+            </form>
 
         <section id="acessFullTable" onclick="openAndCloseTable()">
-            <p>Tabela completa</p>
-            <img src="/images/iconArrowTop.png">
+            <p id="textFullTable">Ampliar tabela</p>
+            <img src="/images/iconArrowTop.png" id="imgOfFullTable">
         </section>
 
         <table id="table">
