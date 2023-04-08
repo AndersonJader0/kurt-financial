@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: #fafafa;
+  background-image: #f1f1f1;
   font-family: "Roboto", sans-serif;
 }
 
@@ -203,6 +203,17 @@ table img {
   background: #3533cd;
   color: #efefef;
   border-bottom-right-radius: 1em;
+}
+
+@media screen and (min-width: 460px) {
+  #bar {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  main {
+    max-width: 450px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
