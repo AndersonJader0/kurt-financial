@@ -137,12 +137,12 @@ button:hover {
   border-radius: 0.5em;
   width: 12em;
   margin: 0 auto 1em auto;
-  transition: letter-spacing 0.25s ease;
+  transition: letter-spacing 0.2s ease;
 }
 #acessFullTable img {
   width: 1.2em;
 }
-#acessFullTable:hover {
+#acessFullTable:active {
   cursor: pointer;
   letter-spacing: 1.2px;
 }
