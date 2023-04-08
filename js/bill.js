@@ -63,7 +63,12 @@ class Bill{
         this.calculateTotalBills();
     }
 
-    clearInputFields = () => document.getElementById('box-fields').reset();
+    clearInputFields = () => {
+    document.getElementById('box-fields').reset();
+        if(document.getElementById('add').innerText == 'Editar'){
+            document.getElementById('add').innerText = 'Adicionar';
+        }
+    }
 
     deleteTableRow(id){
         const tbody = document.getElementById('tbody');
