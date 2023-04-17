@@ -7,7 +7,6 @@ class Bill{
 
     readInputData(){
         let bill = {};
-        bill.id = this.id;
         bill.name = document.getElementById('name').value;
         bill.value = document.getElementById('value').value;
         bill.date = document.getElementById('date').value;
@@ -34,28 +33,25 @@ class Bill{
         
         for(let i = 0; i < this.arrayBills.length; i++){
             let tableRow = tbody.insertRow();
-            let data_name = tableRow.insertCell();
-            let data_value = tableRow.insertCell();
-            let data_date = tableRow.insertCell();
-            let data_options = tableRow.insertCell();
 
-            data_name.innerText = this.arrayBills[i].name;
-            data_value.innerText = this.arrayBills[i].value;
-            data_date.innerText = this.arrayBills[i].date;
+            let [name, value, date, options] = [tableRow.insertCell(), tableRow.insertCell(), tableRow.insertCell(), tableRow.insertCell()];
 
-            let iconEdit = document.createElement('img');
-            let iconDelete = document.createElement('img');
+            name.innerText = this.arrayBills[i].name;
+            value.innerText = this.arrayBills[i].value;
+            date.innerText = this.arrayBills[i].date;
+
+            let [iconEdit, iconDelete] = [document.createElement('img'), document.createElement('img')];
             
             iconDelete.src = '/images/iconClose.svg';
             iconEdit.src = '/images/iconEdit.png';
 
-            data_options.appendChild(iconEdit);
-            data_options.appendChild(iconDelete);
+            options.appendChild(iconEdit);
+            options.appendChild(iconDelete);
 
             iconDelete.setAttribute('onclick', 'bill.deleteTableRow('+ this.arrayBills[i].id +')');
             iconEdit.setAttribute('onclick', 'bill.prepareTableRowEdition('+ JSON.stringify(this.arrayBills[i]) +')');
 
-            data_options.classList.add('onlyTopBottomPadding');
+            options.classList.add('onlyTopBottomPadding');
         }
         this.id++;
         this.clearInputFields();
