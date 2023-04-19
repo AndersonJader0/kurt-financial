@@ -10,6 +10,7 @@ class Bill{
         bill.name = document.getElementById('name').value;
         bill.value = document.getElementById('value').value;
         bill.date = document.getElementById('date').value;
+        bill.id = this.id;
 
         if(bill.value.length === 0){
             alert('É obrigatório preencher o valor');
@@ -79,6 +80,10 @@ class Bill{
     }
 
     prepareTableRowEdition(bill){
+        console.log('name: ' + bill.name);
+        console.log('id: ' + bill.id);
+        console.log('value: ' + bill.value);
+        console.log('date: ' + bill.date);
         const tbody = document.getElementById('tbody');
         document.getElementById('name').value = bill.name;
         document.getElementById('value').value = bill.value;
