@@ -5,6 +5,53 @@ class Bill{
         this.billIdforEdition;
     }
 
+    attBD(){
+        const url = "http://150.136.101.49:8080/bill/all"
+
+        fetch(url).then((response) => {
+            response.json().then((contas) => {
+                contas.map((conta) => {
+                    let bill = {};
+                    bill.id = conta.id;
+                    bill.name = conta.name;
+                    bill.value = conta.value;
+                    bill.date = conta.date;
+
+                    this.saveDateOnArrayBills(bill);
+                    this.addDateOnTable();
+                })
+            })
+        })
+    }
+
+    sendDataToBD(data){
+        fetch(`http://150.136.101.49:8080/bill/add`, {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(res => res.json()).then(data => console.log(data))
+    }
+
+    attObjectOnBD(data){
+        fetch(`http://150.136.101.49:8080/bill/update`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(res => res.json()).then(data => console.log(data))
+    }
+
+    deleteObjOnBD(id){
+        fetch(`http://150.136.101.49:8080/bill/delete/` + id, {
+        method: 'DELETE',
+        })
+        .then(res => res.text()) // or res.json()
+        .then(res => console.log(res))
+    }
+
     readInputData(){
         let bill = {};
         bill.name = document.getElementById('name').value;
@@ -18,14 +65,18 @@ class Bill{
             if(document.getElementById('add').innerText == 'Adicionar'){
                 this.saveDateOnArrayBills(bill);
                 this.addDateOnTable();
+                this.sendDataToBD(bill);
             }else{
                 this.editTableRow(bill);
+                this.attObjectOnBD(bill);
                 document.getElementById('add').innerText = 'Adicionar';
             }
         }
     }
 
-    saveDateOnArrayBills = (bill) => this.arrayBills.push(bill);
+    saveDateOnArrayBills = (bill) => {
+        this.arrayBills.push(bill);
+    }
 
     addDateOnTable(){
         const tbody = document.getElementById('tbody');
@@ -77,6 +128,7 @@ class Bill{
         }
         this.calculateTotalValue();
         this.calculateTotalBills();
+        this.deleteObjOnBD(id);
     }
 
     prepareTableRowEdition(bill){
@@ -124,3 +176,4 @@ class Bill{
 }
 
 var bill = new Bill();
+bill.attBD();
