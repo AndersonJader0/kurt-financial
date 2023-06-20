@@ -7,7 +7,7 @@
 ## 🎯Proposta do projeto
 ### Com o Kurt Financials o usuário conseguirá gerir seus gastos. Podendo registrar o valor total das contas a serem pagas, o sistema lista tudo em uma tabela de forma organizada com o nome da conta, valor da conta, data limite prevista de pagamento e com opções de editar ou excluir esse registro. O sistema calcula o valor total de todas as contas e a quantidade de contas para dar maior clareza ao usuário.
 
-##  🔨Funcionalidades do projeto
+##  🔨Funcionalidades da aplicação web - RFs
 
 - `Funcionalidade 1`: Esconder valor total das contas
 - `Funcionalidade 2`: Ver valor total das contas
@@ -23,7 +23,6 @@
 - `CSS`
 - `JavaScript`
 - `Sass`
-- `JSON`
 
 ## <p align="center">📱Interface </p>
 <p align="center">
